@@ -1,11 +1,15 @@
 import Vue from "../../node_modules/vue/dist/vue";
+import Vuex from "../../node_modules/vuex/dist/vuex";
 import VueRouter from "../../node_modules/vue-router/dist/vue-router.js";
 import index from "./component/index.vue";
 import routes from "./route/route.js";
-import store from "./store/store";
 import axios from "../../node_modules/axios/dist/axios.min";
 
 import hyComponents from "../../node_modules/hy-components/index";
+import storer from "./store/store";
+
+Vue.use(Vuex);
+const store = new Vuex.Store(storer);
 
 const bus = new Vue();
 
